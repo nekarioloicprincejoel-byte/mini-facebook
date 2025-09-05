@@ -11,7 +11,7 @@ Il contient des fichiers HTML, CSS et JavaScript organisés dans leurs dossiers 
 
 ## 🚀 Déploiement
 Le site est hébergé avec **GitHub Pages**.  
-Lien du site : [Clique ici](https://nekarioloicprincejoel.github.io/nom-du-depot)
+Lien du site : [Clique ici](https://nekarioloicprincejoel-byte.github.io/nom-du-depot)
 
 ## ⚙️ Technologies utilisées
 - HTML5
