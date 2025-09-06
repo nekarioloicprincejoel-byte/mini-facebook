@@ -1,14 +1,16 @@
--- Créer la base de données
-CREATE DATABASE IF NOT EXISTS reseau_social;
+-- Création de la base de données
+CREATE DATABASE IF NOT EXISTS mini_facebook;
+USE mini_facebook;
 
--- Utiliser cette base
-USE reseau_social;
+-- Suppression de la table si elle existe déjà
+DROP TABLE IF EXISTS users;
 
--- Créer la table utilisateurs
-CREATE TABLE IF NOT EXISTS utilisateurs (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nom VARCHAR(100) NOT NULL,
-  email VARCHAR(150) UNIQUE NOT NULL,
-  motdepasse VARCHAR(255) NOT NULL,
-  date_inscription TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+-- Création de la table des utilisateurs
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    profile_pic VARCHAR(255) DEFAULT 'default.png',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
