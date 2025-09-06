@@ -1,6 +1,6 @@
 <?php
 session_start();
 session_destroy();
-header("Location: ../frontend/connexion.html");
+header("Location: ../frontend/login.html");
 exit();
 ?>
