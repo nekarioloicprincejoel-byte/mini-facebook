@@ -1,26 +1,30 @@
 <?php
-include "config.php";
 session_start();
+include "config.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $motdepasse = $_POST['motdepasse'];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-    $sql = "SELECT * FROM utilisateurs WHERE email='$email'";
-    $result = $conn->query($sql);
+    $sql = "SELECT * FROM users WHERE username = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    if ($result->num_rows > 0) {
+    if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
-        if (password_verify($motdepasse, $user['motdepasse'])) {
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['nom'] = $user['nom'];
-            header("Location: profil.php");
+
+        if (password_verify($password, $user["password"])) {
+            $_SESSION["user_id"] = $user["id"];
+            $_SESSION["username"] = $user["username"];
+            header("Location: ../frontend/profile.html");
             exit();
         } else {
-            echo "Mot de passe incorrect ❌";
+            echo "Mot de passe incorrect.";
         }
     } else {
-        echo "Email non trouvé ❌";
+        echo "Utilisateur non trouvé.";
     }
 }
 ?>
