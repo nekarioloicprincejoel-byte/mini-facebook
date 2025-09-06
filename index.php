@@ -1,16 +1,29 @@
+<?php
+// On inclut la configuration de la base
+require_once "config.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Facebook - Accueil</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Mini-Facebook - Connexion</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Bienvenue sur Mini Facebook</h1>
-  <div class="menu">
-    <a href="inscription.html">S’inscrire</a>
-    <a href="connexion.html">Se connecter</a>
-  </div>
+    <div class="container">
+        <h2>Connexion</h2>
+        <form action="login.php" method="POST">
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Se connecter</button>
+        </form>
+
+        <p>Pas encore de compte ? <a href="inscription.php">Inscris-toi ici</a></p>
+    </div>
 </body>
 </html>
