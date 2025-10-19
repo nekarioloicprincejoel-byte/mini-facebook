@@ -77,8 +77,8 @@ Format responsive, compatible mobile, avec logo RCA-style intégré.
 
 **Organisateur principal** : [Les Étudiants]  
 **Coordonnateur général** : Loïc Prince Joël NEKARIO  
-**Téléphone** : [+23672130432]  
-**Email** : [nekarioloicprincejoel@gmail.com]  
+**Téléphone** : +23672130432  
+**Email** : nekarioloicprincejoel@gmail.com  
 **Ville** : Bangui, République Centrafricaine
 
 ---
