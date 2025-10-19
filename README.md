@@ -60,3 +60,28 @@ Format responsive, compatible mobile, avec logo RCA-style intégré.
 ---
 
 ## 🧩 Structure du projet
+
+---
+
+## 🤝 Partenaires attendus
+
+- Ministère de l’Éducation nationale
+- Écoles et universités
+- ONG éducatives et culturelles
+- Maisons d’édition et médias
+- Entreprises locales et mécènes
+
+---
+
+## 📬 Contact
+
+**Organisateur principal** : [Nom / Structure]  
+**Coordonnateur général** : Loïc Prince Joël NEKARIO  
+**Téléphone** : [Numéro]  
+**Email** : [Adresse e-mail]  
+**Ville** : Bangui, République Centrafricaine
+
+---
+
+> Ce projet est porté avec passion pour valoriser la jeunesse centrafricaine à travers la langue française.  
+> Chaque mot bien écrit est une victoire pour l’éducation 🇨🇫.
