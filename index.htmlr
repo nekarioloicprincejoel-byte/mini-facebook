@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription - Concours Lis, Épelle-moi & Écris</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #d32f2f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    header img {
+      max-width: 120px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.6em;
+    }
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+      background: #388e3c;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2e7d32;
+    }
+    #confirmation {
+      display: none;
+      margin: 20px auto;
+      max-width: 500px;
+      background: #e8f5e9;
+      color: #2e7d32;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo_concours.jpeg" alt="Logo Concours Lis, Épelle-moi & Écris">
+    <h1>Concours Lis, Épelle-moi & Écris</h1>
+    <p>« Lis bien, Épelle juste, Écris bien ! »</p>
+  </header>
+
+  <form onsubmit="confirmerInscription(event)">
+    <label for="nom">Nom complet</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="ecole">École / Établissement</label>
+    <input type="text" id="ecole" name="ecole" required>
+
+    <label for="niveau">Catégorie</label>
+    <select id="niveau" name="niveau" required>
+      <option value="">-- Choisir --</option>
+      <option value="niveau1">Niveau 1 : Primaire (CM1 – CM2)</option>
+      <option value="niveau2">Niveau 2 : Collège (6e – 3e)</option>
+      <option value="niveau3">Niveau 3 : Lycée / Université</option>
+    </select>
+
+    <label for="contact">Téléphone / WhatsApp</label>
+    <input type="text" id="contact" name="contact" required>
+
+    <label for="volet">Volet choisi</label>
+    <select id="volet" name="volet" required>
+      <option value="">-- Choisir --</option>
+      <option value="epelle">Épelle-moi</option>
+      <option value="lecture">Lecture</option>
+      <option value="dictee">Dictée</option>
+    </select>
+
+    <label for="message">Message / Remarque</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">Envoyer l’inscription</button>
+  </form>
+
+  <div id="confirmation">
+    ✅ Inscription envoyée avec succès ! Merci pour ta participation RCA-style 🎉
+  </div>
+
+  <footer>
+    &copy; 2025 Concours Lis, Épelle-moi & Écris - Tous droits réservés
+  </footer>
+
+  <script>
+    function confirmerInscription(event) {
+      event.preventDefault();
+      document.getElementById('confirmation').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
